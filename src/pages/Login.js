@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const User = {
     email: 'test@example.com',
@@ -13,6 +14,7 @@ const Login = () => {
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
 
+    const navigate = useNavigate();
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -48,13 +50,23 @@ const Login = () => {
     const onClickConfirmButton = () => {
         if(email === User.email && pw === User.pw) {
             alert('로그인에 성공했습니다.');
+            navigate('/main');
         } else {
             alert('등록되지 않은 회원입니다.');
+            navigate('/signup');
         }
+    }
+
+    const goToHomePage = () => {
+        navigate('/');
     }
 
   return (
     <div className='login'>
+      <div className='buttonSection'>
+        <button className="homeButton"onClick={goToHomePage}>HOME</button>
+      </div>
+
       <div className='titleWrap'>
         이메일과 비밀번호를
         <br />
