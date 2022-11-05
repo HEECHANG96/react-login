@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import HomeButton from '../components/HomeButton';
+import SignupButton from '../components/SignupButton';
 
 const User = {
-    email: 'test@example.com',
-    pw: 'test2323@@@'
+    email: 'test@gmail.com',
+    pw: 'test123@@@'
 }
 
 const Login = () => {
@@ -57,16 +59,8 @@ const Login = () => {
         }
     }
 
-    const goToHomePage = () => {
-        navigate('/');
-    }
-
   return (
-    <div className='login'>
-      <div className='buttonSection'>
-        <button className="homeButton"onClick={goToHomePage}>HOME</button>
-      </div>
-
+    <div className='body-style'>
       <div className='titleWrap'>
         이메일과 비밀번호를
         <br />
@@ -118,8 +112,10 @@ const Login = () => {
 
       <div>
         <button onClick={onClickConfirmButton} disabled={notAllow} className='bottomButton'>
-            확인
+            로그인
         </button>
+       <SignupButton />
+       <HomeButton />
       </div>
     </div>
   )

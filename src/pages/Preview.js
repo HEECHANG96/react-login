@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Preview = () => {
 
@@ -9,13 +10,16 @@ const Preview = () => {
     };
     
   return (
-    <div>
-      <div>TIL</div>
-      <br />
-      <div>TODAY I LEARNED</div>
-
+    <div className='body-style'>
+      <div className='contentWrap'>
+        <img 
+          className='TIL-image'
+          src='https://velog.velcdn.com/images/leedocs/post/8f5fd8b6-47b3-4d6e-9ac1-4d6ad71dd03f/image.gif'
+        />
+      </div>
+      
       <div>
-        <button onClick={goToLoginPage}>지금 시작하기</button>
+        <Button className='bottomButton' onClick={goToLoginPage}>지금 시작하기</Button>
       </div>
     </div>
   )

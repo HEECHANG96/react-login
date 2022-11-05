@@ -1,4 +1,4 @@
-.login {
+.body-style {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -16,14 +16,6 @@
     
     display: flex;
     flex-direction: column;
-}
-
-.homeButton {
-    background-color: #9e30f4;
-    border-radius: 5px;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
 .titleWrap {
@@ -76,6 +68,8 @@
     font-size: 12px;
 }
 
+/* COMPONENTS */
+
 .bottomButton {
     width: 100%;
     height: 48px;
@@ -91,4 +85,12 @@
 .bottomButton:disabled {
     background-color: #dadada;
     color: white;
+}
+
+/* image */
+.TIL-image {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 400px;
 }
